@@ -1,6 +1,70 @@
-<HTML>
-<HEAD><TITLE>Mona's P-Seminar</TITLE></HEAD>
-<BODY>
-und hier geht's rund!
-</BODY>
-</HTML>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Ramona's P-Seminar Kunst</title>
+<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.5.2/darkly/bootstrap.min.css">
+<link rel="stylesheet" href="jquery.flipster.min.css">
+<style>
+body {
+  overflow: hidden; /* Hide scrollbars */
+}
+.container { margin: 15px auto; max-width: 1200px; height: 1200px;}
+h2 { margin: 2rem auto; }
+.landscape {
+    height: 20%;
+    width: auto;
+}
+.flip-items {
+    min-height: 1200px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<div id="carousel">
+        <ul class="flip-items">
+            <li data-flip-title="c00_001" data-flip-category="carousel0">
+                <a href="carousel1.html"><img src="img/c00_001_small.jpg"></a>
+            </li>
+            <li data-flip-title="c00_002" data-flip-category="carousel0">
+                <a href="carousel1.html"><img src="img/c00_002_small.jpg"></a>
+            </li>
+            <li data-flip-title="c00_003" data-flip-category="carousel0">
+                <a href="carousel2.html"><img src="img/c00_003_small.jpg"></a>
+            </li>
+            <li data-flip-title="c00_004" data-flip-category="carousel0">
+                <a href="carousel2.html"><img src="img/c00_004_small.jpg"></a>
+            </li>
+            <li data-flip-title="c00_005" data-flip-category="carousel0">
+                <a href="carousel3.html"><img src="img/c00_005_small.jpg"></a>
+            </li>
+            <li data-flip-title="c00_006" data-flip-category="carousel0">
+                <a href="carousel3.html"><img src="img/c00_006_small.jpg"></a>
+            </li>
+            <li data-flip-title="c00_007" data-flip-category="carousel0">
+                <a href="carousel3.html"><img src="img/c00_007_small.jpg"></a>
+            </li>
+        </ul>
+    </div>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="jquery.flipster.min.js"></script>
+<script>
+    var coverflow = $("#coverflow").flipster();
+        var carousel = $("#carousel").flipster({
+        style: 'carousel',
+        spacing: -0.25,
+        nav: false,
+        buttons: true,
+        start: 0,
+        loop: true
+    });
+</script>
+</div>
+
+</body>
+</html>
