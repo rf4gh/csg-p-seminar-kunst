@@ -63,6 +63,13 @@ h2 { margin: 2rem auto; }
         start: 0,
         loop: true
     });
+    // focus carousel to enable keypress controls
+    setTimeout(() => {
+      this.$carousel.focus().trigger({
+        type: 'keypress',
+        which: 13
+      });
+    }, 100);
 </script>
 </div>
 
