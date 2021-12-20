@@ -14,10 +14,6 @@ body {
 }
 .container { margin: 15px auto; max-width: 1200px; height: 1200px;}
 h2 { margin: 2rem auto; }
-.landscape {
-    height: 20%;
-    width: auto;
-}
 .flip-items {
     min-height: 1200px;
 }
@@ -26,35 +22,27 @@ h2 { margin: 2rem auto; }
 
 <body>
 <div class="container">
-    <a href="index.html">ZURÜCK</a>
+
+    <div id="buttonDiv">
+        <button class="btn-primary" type="button" id="backButton" value="back">Zurück</button>
+    </div>
+
     <div id="carousel">
         <ul class="flip-items">
-            <li data-flip-title="text1" data-flip-category="Carousel 2">
-                <img src="/csg-p-seminar-kunst/img/text1.gif">
+            <li data-flip-title="c02_001" data-flip-category="Carousel 2">
+                <img src="/csg-p-seminar-kunst/img/c02_001_small.jpg">
             </li>
-            <li data-flip-title="text1" data-flip-category="Carousel 2">
-                <img src="/csg-p-seminar-kunst/img/text2.gif">
+            <li data-flip-title="c02_002" data-flip-category="Carousel 2">
+                <img src="/csg-p-seminar-kunst/img/c01_002_small.jpg">
             </li>
-            <li data-flip-title="text1" data-flip-category="Carousel 2">
-                <img src="/csg-p-seminar-kunst/img/text3.gif">
+            <li data-flip-title="c02_003" data-flip-category="Carousel 2">
+                <img src="/csg-p-seminar-kunst/img/c02_003_small.jpg">
             </li>
-            <li data-flip-title="text1" data-flip-category="Carousel 2">
-                <img src="/csg-p-seminar-kunst/img/text4.gif">
+            <li data-flip-title="c02_004" data-flip-category="Carousel 2">
+                <img src="/csg-p-seminar-kunst/img/c02_004_small.jpg">
             </li>
-            <li data-flip-title="text1" data-flip-category="Carousel 2">
-                <img src="/csg-p-seminar-kunst/img/text5.gif">
-            </li>
-            <li data-flip-title="text1" data-flip-category="Carousel 2">
-                <img src="/csg-p-seminar-kunst/img/text6.gif">
-            </li>
-            <li data-flip-title="text1" data-flip-category="Carousel 2">
-                <img src="/csg-p-seminar-kunst/img/text7.gif">
-            </li>
-            <li data-flip-title="text1" data-flip-category="Carousel 2">
-                <img src="/csg-p-seminar-kunst/img/text8.gif">
-            </li>
-            <li data-flip-title="text1" data-flip-category="Carousel 2">
-                <img src="/csg-p-seminar-kunst/img/text9.gif">
+            <li data-flip-title="c02_005" data-flip-category="Carousel 2">
+                <img src="/csg-p-seminar-kunst/img/c02_005_small.jpg">
             </li>
         </ul>
     </div>
@@ -63,12 +51,12 @@ h2 { margin: 2rem auto; }
 <script>
     var coverflow = $("#coverflow").flipster();
         var carousel = $("#carousel").flipster({
-        style: 'coverflow',
+        style: 'carousel',
         spacing: -0.25,
         nav: false,
         buttons: true,
         start: 0,
-        loop: true
+        loop: 0
     });
     $("#backButton").click(function() {
         window.location="/csg-p-seminar-kunst/index.html";
