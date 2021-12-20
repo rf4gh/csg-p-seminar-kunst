@@ -62,6 +62,14 @@ h2 { margin: 2rem auto; }
     $("#backButton").click(function() {
         window.location="index.html";
     });
+
+    // focus carousel to enable keypress controls
+    setTimeout(() => {
+      this.$carousel.focus().trigger({
+        type: 'keypress',
+        which: 13
+      });
+    }, 100);
 </script>
 </div>
 
