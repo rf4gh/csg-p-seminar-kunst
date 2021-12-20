@@ -49,8 +49,7 @@ h2 { margin: 2rem auto; }
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="jquery.flipster.min.js"></script>
 <script>
-    var coverflow = $("#coverflow").flipster();
-        var carousel = $("#carousel").flipster({
+    var carousel = $("#carousel").flipster({
         style: 'carousel',
         spacing: -0.25,
         nav: false,
@@ -62,7 +61,14 @@ h2 { margin: 2rem auto; }
     $("#backButton").click(function() {
         window.location="index.html";
     });
-</script>
+    // focus carousel to enable keypress controls
+    setTimeout(() => {
+      this.$carousel.focus().trigger({
+        type: 'keypress',
+        which: 13
+      });
+    }, 100);
+  </script>
 </div>
 
 </body>
